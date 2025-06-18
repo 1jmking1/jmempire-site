@@ -291,20 +291,28 @@
 
 <div class="rating-section reveal">
   <h2>⭐ Rate Your Experience</h2>
-  <form name="rating" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="rating">
-    <label for="stars">Your Rating:</label>
-    <select name="stars" id="stars" required style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
-      <option value="5">⭐⭐⭐⭐⭐</option>
-      <option value="4">⭐⭐⭐⭐</option>
-      <option value="3">⭐⭐⭐</option>
-      <option value="2">⭐⭐</option>
-      <option value="1">⭐</option>
-    </select>
-    <input type="text" name="name" placeholder="Your name" required>
-    <input type="email" name="email" placeholder="Your email (optional)">
-    <button type="submit">Submit Rating</button>
-  </form>
+  
+<h2>⭐ Rate Your Experience</h2>
+
+<form name="rating" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="rating">
+  <input type="hidden" name="redirect" value="/thank-you.html">
+
+  <label for="stars">Your Rating:</label><br>
+  <select name="stars" id="stars" required>
+    <option value="5">⭐⭐⭐⭐⭐</option>
+    <option value="4">⭐⭐⭐⭐</option>
+    <option value="3">⭐⭐⭐</option>
+    <option value="2">⭐⭐</option>
+    <option value="1">⭐</option>
+  </select><br>
+
+  <input type="text" name="name" placeholder="Your name" required><br>
+  <input type="email" name="email" placeholder="Your email (optional)"><br>
+
+  <button type="submit">Submit Rating</button>
+</form>
+
 </div>
 
 <div class="contact reveal">
@@ -314,38 +322,62 @@
 </div>
 
 <!-- Hidden Netlify form for backend detection -->
+
+<h2>⭐ Rate Your Experience</h2>
+
+<form name="rating" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="rating">
+  <input type="hidden" name="redirect" value="/thank-you.html">
+
+  <label for="stars">Your Rating:</label><br>
+  <select name="stars" id="stars" required>
+    <option value="5">⭐⭐⭐⭐⭐</option>
+    <option value="4">⭐⭐⭐⭐</option>
+    <option value="3">⭐⭐⭐</option>
+    <option value="2">⭐⭐</option>
+    <option value="1">⭐</option>
+  </select><br>
+
+  <input type="text" name="name" placeholder="Your name" required><br>
+  <input type="email" name="email" placeholder="Your email (optional)"><br>
+
+  <button type="submit">Submit Rating</button>
+</form>
+
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(reveal => observer.observe(reveal));
+</script>
+
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(reveal => observer.observe(reveal));
+</script>
+
+
 <form name="rating" netlify hidden>
   <input type="text" name="stars">
   <input type="text" name="name">
   <input type="email" name="email">
 </form>
-
-<script>
-  const reveals = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, { threshold: 0.1 });
-
-  reveals.forEach(reveal => observer.observe(reveal));
-</script>
-
-
-<script>
-  const reveals = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, { threshold: 0.1 });
-
-  reveals.forEach(reveal => observer.observe(reveal));
-</script>
 
 </body>
 </html>
