@@ -2,28 +2,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>JM Empire – Branding & Web Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      background: #111;
+      background-color: #111;
       color: #fff;
       font-family: Arial, sans-serif;
-      text-align: center;
       padding: 40px;
-    }
-    h1 {
-      color: #4CAF50;
+      text-align: center;
     }
     img {
       width: 200px;
       margin-bottom: 20px;
     }
+    h1, h2 {
+      color: #4CAF50;
+    }
+    .services li {
+      background-color: #222;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 5px solid #4CAF50;
+      border-radius: 8px;
+      font-size: 16px;
+      list-style: none;
+    }
+    .testimonials {
+      background: #1b1b1b;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonial-box {
+      text-align: left;
+      background: #222;
+      border-left: 5px solid #4CAF50;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .testimonial-name {
+      color: #aaa;
+      margin-top: 5px;
+      font-size: 0.9em;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    form button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    .contact {
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="JM Empire Logo">
-  <h1>Welcome to JM Empire</h1>
-  <p>Affordable branding, website design, and tech support from Zambia.</p>
+
+<img src="logo.png" alt="JM Empire Logo">
+<h1>Welcome to JM Empire</h1>
+<p>Affordable branding, website design, and tech support from Zambia.</p>
+
+<!-- Social Media Icons -->
+<div class="socials" style="margin: 20px;">
+  <a href="https://www.facebook.com/share/15eT95tKei/" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook-f fa-2x"></i></a>
+  <a href="https://www.facebook.com/share/1Df6N78PQ5/" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
+  <a href="https://www.instagram.com/1jmking1?igsh=MTl5cTVpdG9kd3o2aw==" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram fa-2x"></i></a>
+  <a href="https://wa.me/260775544763" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp fa-2x"></i></a>
+</div>
+
+<h2>💼 Our Services</h2>
+<ul class="services">
+  <li>🔧 Logo Design – From K50</li>
+  <li>🌍 Website Creation – From K150</li>
+  <li>📱 Social Media Setup – K70</li>
+  <li>🛠️ Tech Help – K30</li>
+</ul>
+
+<div class="testimonials">
+  <h2>💬 What Our Clients Say</h2>
+  <div class="testimonial-box">
+    “JM Empire made my business logo fast and professional. Highly recommend!”
+    <div class="testimonial-name">– Ruth N.</div>
+  </div>
+  <div class="testimonial-box">
+    “I now have a beautiful website and Facebook page for my shop. Great service.”
+    <div class="testimonial-name">– Brian K.</div>
+  </div>
+</div>
+
+<div class="rating-section">
+  <h2>⭐ Rate Your Experience</h2>
+  <form name="rating" method="POST" data-netlify="true">
+    <label for="stars">Your Rating:</label>
+    <select name="stars" id="stars" required>
+      <option value="5">⭐⭐⭐⭐⭐</option>
+      <option value="4">⭐⭐⭐⭐</option>
+      <option value="3">⭐⭐⭐</option>
+      <option value="2">⭐⭐</option>
+      <option value="1">⭐</option>
+    </select>
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email (optional)">
+    <button type="submit">Submit Rating</button>
+  </form>
+</div>
+
+<div class="contact">
+  <h2>📞 Contact Us</h2>
+  <p>Email: <a href="mailto:johnmiyanda28@gmail.com" style="color: #4CAF50;">johnmiyanda28@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/260775544763" style="color: #4CAF50;">+260 775 544 763</a></p>
+</div>
+
 </body>
 </html>
