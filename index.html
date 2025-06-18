@@ -2,66 +2,350 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
   <title>JM Empire – Branding & Web Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="JM Empire – Affordable branding, website design & tech support in Zambia.">
+  <meta name="keywords" content="branding, web design, JM Empire, Zambia, logo design, website creation, social media setup, tech support">
+  <meta name="author" content="JM Empire">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      background: #111;
+      background: linear-gradient(-45deg, #111, #1b1b1b, #222, #111);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
       color: #fff;
       font-family: Arial, sans-serif;
-      text-align: center;
       padding: 40px;
+      text-align: center;
     }
-    h1, h2 {
-      color: #4CAF50;
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     img {
       width: 200px;
       margin-bottom: 20px;
     }
-    form {
-      margin-top: 40px;
+    h1, h2 {
+      color: #4CAF50;
+    }
+    .services li {
+      background-color: #222;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 5px solid #4CAF50;
+      border-radius: 8px;
+      font-size: 16px;
+      list-style: none;
+    }
+    .testimonials {
+      background: #1b1b1b;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonial-box {
+      text-align: left;
+      background: #222;
+      border-left: 5px solid #4CAF50;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .testimonial-name {
+      color: #aaa;
+      margin-top: 5px;
+      font-size: 0.9em;
     }
     form input, form select {
+      width: 100%;
       padding: 10px;
-      margin: 10px;
+      margin: 10px 0;
       border-radius: 5px;
       border: none;
-      width: 90%;
-      max-width: 300px;
     }
-    button {
+    form button {
+      background: #4CAF50;
+      color: white;
       padding: 10px 20px;
-      background-color: #4CAF50;
-      color: #fff;
       border: none;
       border-radius: 5px;
+      transition: 0.3s;
     }
-  </style>
+    form button:hover {
+      animation: bounce 0.5s;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .contact {
+      margin-top: 40px;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .slide-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease-out forwards;
+    }
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .socials i {
+      animation: float 2s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .contact a:hover {
+      text-shadow: 0 0 8px #4CAF50;
+      transition: text-shadow 0.3s;
+    }
+  
+<style>
+  body {
+    background: linear-gradient(-45deg, #111, #1b1b1b, #222, #111);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  h1, h2 {
+    color: #4CAF50;
+  }
+  img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  form {
+    margin-top: 40px;
+  }
+  form input, form select {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 90%;
+    max-width: 300px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  button:hover {
+    animation: bounce 0.5s;
+  }
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+  }
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  .slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards;
+  }
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+</style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7FEBB74SY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S7FEBB74SY');
+  </script>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+  :root {
+    --bg: #111;
+    --text: #fff;
+  }
+  [data-theme="dark"] {
+    --bg: #111;
+    --text: #fff;
+  }
+  [data-theme="light"] {
+    --bg: #fff;
+    --text: #111;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+  }
+</style>
+<script>
+  function toggleTheme() {
+    const theme = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  });
+</script>
+
 </head>
 <body>
-  <img src="logo.png" alt="JM Empire Logo">
-  <h1>Welcome to JM Empire</h1>
-  <p>Affordable branding, website design, and tech support from Zambia.</p>
+<button onclick="toggleTheme()">🌓 Toggle Dark/Light Mode</button>
 
+<img src="logo.png" alt="JM Empire Logo" class="fade-in">
+<h1 class="fade-in">Welcome to JM Empire</h1>
+<p>Affordable branding, website design, and tech support from Zambia.</p>
+
+<div class="socials" style="margin: 20px;">
+  <a href="https://www.facebook.com/share/15eT95tKei/" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook-f fa-2x"></i></a>
+  <a href="https://www.facebook.com/share/1Df6N78PQ5/" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
+  <a href="https://www.instagram.com/1jmking1?igsh=MTl5cTVpdG9kd3o2aw==" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram fa-2x"></i></a>
+  <a href="https://wa.me/260775544763" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp fa-2x"></i></a>
+</div>
+
+<h2 class="reveal">💼 Our Services</h2>
+<ul class="services reveal">
+  <li class="slide-up">🔧 Logo Design – From K50</li>
+  <li class="slide-up">🌍 Website Creation – From K150</li>
+  <li class="slide-up">📱 Social Media Setup – K70</li>
+  <li class="slide-up">🛠️ Tech Help – K30</li>
+</ul>
+
+<div class="testimonials reveal">
+  <h2>💬 What Our Clients Say</h2>
+  <div class="testimonial-box pulse">
+    “JM Empire made my business logo fast and professional. Highly recommend!”
+    <div class="testimonial-name">– Ruth N.</div>
+  </div>
+  <div class="testimonial-box pulse">
+    “I now have a beautiful website and Facebook page for my shop. Great service.”
+    <div class="testimonial-name">– Brian K.</div>
+  </div>
+</div>
+
+<div class="rating-section reveal">
   <h2>⭐ Rate Your Experience</h2>
   <form name="rating" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="rating">
-    <input type="hidden" name="redirect" value="/thank-you.html">
-
-    <label for="stars">Your Rating:</label><br>
-    <select name="stars" id="stars" required>
+    <label for="stars">Your Rating:</label>
+    <select name="stars" id="stars" required style="width: 100%; padding: 10px; border-radius: 5px; border: none;">
       <option value="5">⭐⭐⭐⭐⭐</option>
       <option value="4">⭐⭐⭐⭐</option>
       <option value="3">⭐⭐⭐</option>
       <option value="2">⭐⭐</option>
       <option value="1">⭐</option>
-    </select><br>
-
-    <input type="text" name="name" placeholder="Your name" required><br>
-    <input type="email" name="email" placeholder="Your email (optional)"><br>
-
+    </select>
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email (optional)">
     <button type="submit">Submit Rating</button>
   </form>
+</div>
+
+<div class="contact reveal">
+  <h2>📞 Contact Us</h2>
+  <p>Email: <a href="mailto:johnmiyanda28@gmail.com" style="color: #4CAF50;">johnmiyanda28@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/260775544763" style="color: #4CAF50;">+260 775 544 763</a></p>
+</div>
+
+<!-- Hidden Netlify form for backend detection -->
+<form name="rating" netlify hidden>
+  <input type="text" name="stars">
+  <input type="text" name="name">
+  <input type="email" name="email">
+</form>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(reveal => observer.observe(reveal));
+</script>
+
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(reveal => observer.observe(reveal));
+</script>
+
 </body>
 </html>
