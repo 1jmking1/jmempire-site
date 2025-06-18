@@ -1,3 +1,3 @@
 # JM Empire
 
-Official branding and web services site for JM Empire.
+Official website for JM Empire – branding, web design, and tech support in Zambia.
