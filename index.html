@@ -1,262 +1,85 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>JM Empire – Branding & Web Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="UTF-8">
-  <meta name="description" content="JM Empire – Affordable branding, website design & tech support in Zambia.">
-  <meta name="keywords" content="branding, web design, JM Empire, Zambia, logo design, website creation, social media setup, tech support">
-  <meta name="author" content="JM Empire">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <title>JM Empire | Custom Logos That Define Brands</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    body {
-      background: linear-gradient(-45deg, #111, #1b1b1b, #222, #111);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      text-align: center;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #111; color: #fff; line-height: 1.6; }
+    .container { max-width: 1200px; margin: auto; padding: 2rem; }
+    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 4rem 1rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #4CAF50; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; color: #ccc; }
+    .hero img { max-width: 300px; margin: 1rem 0; border-radius: 12px; }
+    .btn, .btn-secondary {
+      display: inline-block; padding: 0.75rem 1.5rem; margin: 0.5rem;
+      border-radius: 50px; text-decoration: none; font-weight: bold;
     }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .btn { background: #4CAF50; color: white; }
+    .btn-secondary { border: 2px solid #4CAF50; color: #4CAF50; background: transparent; }
+    .section-title { font-size: 2rem; text-align: center; margin: 3rem 0 1.5rem; }
+    .steps, .reviews, .portfolio { display: grid; gap: 1rem; padding: 1rem; }
+    .steps { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .step, .review, .portfolio-item {
+      background: #1c1c1c; padding: 1.5rem; border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
-    h1, h2 { color: #4CAF50; }
-    img { width: 200px; margin-bottom: 20px; }
-    .services li {
-      background-color: #222;
-      padding: 10px;
-      margin: 10px 0;
-      border-left: 5px solid #4CAF50;
-      border-radius: 8px;
-      font-size: 16px;
-      list-style: none;
-    }
-    .testimonials {
-      background: #1b1b1b;
-      padding: 30px;
-      border-radius: 12px;
-      margin-top: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .testimonial-box {
-      text-align: left;
-      background: #222;
-      border-left: 5px solid #4CAF50;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    .testimonial-name {
-      color: #aaa;
-      margin-top: 5px;
-      font-size: 0.9em;
-    }
-    form input, form select {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: none;
-    }
-    form button {
-      background: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    form button:hover {
-      animation: bounce 0.5s;
-    }
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
-    }
-    .contact { margin-top: 40px; }
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease-in forwards;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-    .slide-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 1s ease-out forwards;
-    }
-    @keyframes slideUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s ease;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .pulse { animation: pulse 2s infinite; }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
-    .socials i {
-      animation: float 2s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-    .contact a:hover {
-      text-shadow: 0 0 8px #4CAF50;
-      transition: text-shadow 0.3s;
+    footer { text-align: center; margin: 4rem 0 2rem; font-size: 0.9rem; color: #888; }
+    .whatsapp-button {
+      position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white;
+      padding: 12px 18px; border-radius: 50px; font-weight: bold; text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25); z-index: 9999; display: block;
     }
   </style>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-
-<style>
-  .portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
-    margin: 40px auto;
-    max-width: 900px;
-    padding: 20px;
-  }
-  .portfolio h2 {
-    grid-column: 1 / -1;
-    text-align: center;
-    color: #4CAF50;
-  }
-  .testimonial-box {
-    background: #1c1c1c;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
-  }
-  .testimonial-box:hover {
-    transform: translateY(-6px);
-  }
-</style>
-
 </head>
 <body>
-<button onclick="toggleTheme()">🌓 Toggle Dark/Light Mode</button>
+  <section class="hero container">
+    <h1>I Design Logos That Speak for Your Brand</h1>
+    <p>Hi, I'm JM Empire. I help entrepreneurs stand out with meaningful, clean, and iconic logos.</p>
+    <a href="#portfolio" class="btn">See My Work</a>
+    <a href="#contact" class="btn-secondary">Contact Me</a>
+    <img src="logo.png" alt="JM Empire Logo Preview" />
+  </section>
 
-<img src="logo.png" alt="JM Empire Logo" class="fade-in">
-<h1 class="fade-in">Welcome to JM Empire</h1>
-<p>Affordable branding, website design, and tech support from Zambia.</p>
-
-<div class="socials" style="margin: 20px;">
-  <a href="https://www.facebook.com/share/15eT95tKei/" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook-f fa-2x"></i></a>
-  <a href="https://www.facebook.com/share/1Df6N78PQ5/" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
-  <a href="https://www.instagram.com/1jmking1?igsh=MTl5cTVpdG9kd3o2aw==" target="_blank" style="color: #E1306C;"><i class="fab fa-instagram fa-2x"></i></a>
-  <a href="https://wa.me/260775544763" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp fa-2x"></i></a>
-</div>
-
-<h2 class="reveal">💼 Our Services</h2>
-<ul class="services reveal">
-  <li class="slide-up">🔧 Logo Design – From K50</li>
-  <li class="slide-up">🌍 Website Creation – From K150</li>
-  <li class="slide-up">📱 Social Media Setup – K70</li>
-  <li class="slide-up">🛠️ Tech Help – K30</li>
-</ul>
-
-<div class="testimonials reveal">
-   <h2>💬 What Our Clients Say</h2>
-    <div class="testimonial-box pulse">
-      <strong>Review:</strong><br>
-      “JM Empire created a stunning logo for my brand that blew me away. Highly professional, fast, and truly understands design!”
+  <section class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+      <div class="step">1️⃣ Tell Me About Your Brand</div>
+      <div class="step">2️⃣ I Design Multiple Drafts</div>
+      <div class="step">3️⃣ You Choose & We Polish</div>
+      <div class="step">4️⃣ You Get All Final Files</div>
     </div>
-  <div class="testimonial-box pulse">
-    “JM Empire made my business logo fast and professional. Highly recommend!”
-    <div class="testimonial-name">– Ruth N.</div>
-  </div>
-  <div class="testimonial-box pulse">
-    “I now have a beautiful website and Facebook page for my shop. Great service.”
-    <div class="testimonial-name">– Brian K.</div>
-  </div>
-</div>
+  </section>
 
-<div class="rating-section reveal">
-  <h2>⭐ Rate Your Experience</h2>
-  <form name="rating" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="rating">
-  <input type="hidden" name="redirect" value="/thank-you.html">
-    <label for="stars">Your Rating:</label><br>
-    <select name="stars" id="stars" required>
-      <option value="5">⭐⭐⭐⭐⭐</option>
-      <option value="4">⭐⭐⭐⭐</option>
-      <option value="3">⭐⭐⭐</option>
-      <option value="2">⭐⭐</option>
-      <option value="1">⭐</option>
-    </select><br>
-    <input type="text" name="name" placeholder="Your name" required><br>
-    <input type="email" name="email" placeholder="Your email (optional)"><br>
-    <button type="submit">Submit Rating</button>
-  </form>
-</div>
+  <section class="container">
+    <h2 class="section-title">Happy Clients</h2>
+    <div class="reviews">
+      <div class="review">“JM Empire delivered a world‑class logo that blew me away.”</div>
+      <div class="review">“Clean, modern, and exactly what I envisioned. Highly recommended!”</div>
+    </div>
+  </section>
 
+  <section id="portfolio" class="container">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio">
+      <div class="portfolio-item">Zed Fusion – Logo + Social Kit</div>
+      <div class="portfolio-item">BizBoost – Branding + Website</div>
+      <div class="portfolio-item">TechFix – Service Landing Page</div>
+    </div>
+  </section>
 
-<div class="portfolio reveal">
-  <h2>📁 Our Portfolio</h2>
-  <div class="testimonial-box pulse">
-    <strong>Zed Fusion</strong><br>
-    Logo + Social Kit<br>
-    <em>Modern identity for a youth-oriented brand.</em>
-  </div>
-  <div class="testimonial-box pulse">
-    <strong>BizBoost</strong><br>
-    Website + Brand Setup<br>
-    <em>Startup branding and digital launch package.</em>
-  </div>
-  <div class="testimonial-box pulse">
-    <strong>TechFix</strong><br>
-    Service Website + WhatsApp Integration<br>
-    <em>Clean responsive tech support landing page.</em>
-  </div>
-</div>
+  <section id="contact" class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Email: <a href="mailto:johnmiyanda28@gmail.com" style="color:#4CAF50;">johnmiyanda28@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/260775544763" style="color:#4CAF50;">Chat Now</a></p>
+  </section>
 
+  <footer>© 2025 JM Empire. All rights reserved.</footer>
 
-<div class="contact reveal">
-  <h2>📞 Contact Us</h2>
-  <p>Email: <a href="mailto:johnmiyanda28@gmail.com" style="color: #4CAF50;">johnmiyanda28@gmail.com</a></p>
-  <p>WhatsApp: <a href="https://wa.me/260775544763" style="color: #4CAF50;">+260 775 544 763</a></p>
-</div>
-
-<script>
-  const reveals = document.querySelectorAll(".reveal");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(reveal => observer.observe(reveal));
-</script>
-
-<form name="rating" netlify hidden>
-  <input type="text" name="stars">
-  <input type="text" name="name">
-  <input type="email" name="email">
-</form>
-
-<a href="https://wa.me/260775544763" target="_blank"
-   style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 12px 16px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 999;">
-   💬 Chat with us
-</a>
-
+  <a class="whatsapp-button" href="https://wa.me/260775544763" target="_blank">💬 Chat with us</a>
 </body>
 </html>
