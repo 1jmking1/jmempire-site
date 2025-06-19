@@ -123,6 +123,33 @@
     }
   </style>
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin: 40px auto;
+    max-width: 900px;
+    padding: 20px;
+  }
+  .portfolio h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #4CAF50;
+  }
+  .testimonial-box {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  .testimonial-box:hover {
+    transform: translateY(-6px);
+  }
+</style>
+
 </head>
 <body>
 <button onclick="toggleTheme()">🌓 Toggle Dark/Light Mode</button>
@@ -147,7 +174,11 @@
 </ul>
 
 <div class="testimonials reveal">
-  <h2>💬 What Our Clients Say</h2>
+   <h2>💬 What Our Clients Say</h2>
+    <div class="testimonial-box pulse">
+      <strong>Review:</strong><br>
+      “JM Empire created a stunning logo for my brand that blew me away. Highly professional, fast, and truly understands design!”
+    </div>
   <div class="testimonial-box pulse">
     “JM Empire made my business logo fast and professional. Highly recommend!”
     <div class="testimonial-name">– Ruth N.</div>
@@ -177,6 +208,27 @@
   </form>
 </div>
 
+
+<div class="portfolio reveal">
+  <h2>📁 Our Portfolio</h2>
+  <div class="testimonial-box pulse">
+    <strong>Zed Fusion</strong><br>
+    Logo + Social Kit<br>
+    <em>Modern identity for a youth-oriented brand.</em>
+  </div>
+  <div class="testimonial-box pulse">
+    <strong>BizBoost</strong><br>
+    Website + Brand Setup<br>
+    <em>Startup branding and digital launch package.</em>
+  </div>
+  <div class="testimonial-box pulse">
+    <strong>TechFix</strong><br>
+    Service Website + WhatsApp Integration<br>
+    <em>Clean responsive tech support landing page.</em>
+  </div>
+</div>
+
+
 <div class="contact reveal">
   <h2>📞 Contact Us</h2>
   <p>Email: <a href="mailto:johnmiyanda28@gmail.com" style="color: #4CAF50;">johnmiyanda28@gmail.com</a></p>
@@ -200,5 +252,11 @@
   <input type="text" name="name">
   <input type="email" name="email">
 </form>
+
+<a href="https://wa.me/260775544763" target="_blank"
+   style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 12px 16px; border-radius: 50px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 999;">
+   💬 Chat with us
+</a>
+
 </body>
 </html>
