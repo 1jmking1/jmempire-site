@@ -122,6 +122,7 @@
       transition: text-shadow 0.3s;
     }
   </style>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 <button onclick="toggleTheme()">🌓 Toggle Dark/Light Mode</button>
@@ -161,6 +162,7 @@
   <h2>⭐ Rate Your Experience</h2>
   <form name="rating" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="rating">
+  <input type="hidden" name="redirect" value="/thank-you.html">
     <label for="stars">Your Rating:</label><br>
     <select name="stars" id="stars" required>
       <option value="5">⭐⭐⭐⭐⭐</option>
@@ -192,5 +194,11 @@
   }, { threshold: 0.1 });
   reveals.forEach(reveal => observer.observe(reveal));
 </script>
+
+<form name="rating" netlify hidden>
+  <input type="text" name="stars">
+  <input type="text" name="name">
+  <input type="email" name="email">
+</form>
 </body>
 </html>
